@@ -6,7 +6,7 @@ Demostración de técnicas de Ingeniería de Software utilizando las librerías 
 > 
 > Jadiel Zúñiga Rodríguez [@JZRodriguez](https://github.com/JZRodriguez)
 > 
-> José I. Esparza Ireta [@](https://github.com/)
+> José I. Esparza Ireta [@ignacio-ireta](https://github.com/ignacio-ireta)
 > 
 > Sofía García De La Rosa [@SofiaDeLaRosa](https://github.com/SofiaDeLaRosa)
 
