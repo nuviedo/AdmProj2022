@@ -1,5 +1,10 @@
 import PySimpleGUI as sg
 
+L_Login=[[sg.Text("Please log-in.")],
+[sg.Text("Username:"),sg.Push(),sg.Input("",k="-L.Username-"),],
+[sg.Text("Password:"),sg.Push(),sg.Input("",password_char="*",k="-L.Password-")],
+[sg.Button("Submit",k="-L.Submit-")],
+]
 
 L_Main=[[
     sg.TabGroup([[
@@ -84,7 +89,7 @@ L_Main=[[
 DBW=None
 
 #Windows
-User=0
+login_w=sg.Window("Log-in: Pharmacy Terminal",L_Login,finalize=True)
 window=None
 eventdef={}
 
@@ -302,6 +307,31 @@ eventdef["-3.Checkout-"]=list_3_b
 eventdef["-3.Rem-"]=rem_3
 
 eventdef["-3.Purchase-"]=purchase_3
+
+
+
+User=None
+def TestLogin(Username,Password):
+    global User,DBW
+    Token=DBW.salt(Username,Password)
+    Res=DBW.table_find_approx("employees",{"Token":Token})
+    if(len(Res)==1 and str(Res[0]["ID"])==Username):
+        User=Username
+    else:
+        sg.popup_error("Verifique su usuario y contraseña.",title="Denegado",auto_close=True,auto_close_duration=2,)
+        
+    
+def Login(DB):
+    global User,DBW
+    DBW=DB
+    while(User==None):
+        event, values=login_w.read()
+        if event==sg.WIN_CLOSED:
+            break
+        elif event=="-L.Submit-":
+            TestLogin(values["-L.Username-"],values["-L.Password-"])
+    login_w.close()
+    return User!=None
 
 def EventLoop(DB):
     global window,eventdef,DBW

@@ -1,6 +1,7 @@
 import sqlite3 as sq
 import time
 import datetime
+import hashlib
 
 
 class DBW:
@@ -27,7 +28,7 @@ class DBW:
         
         self.Cursor.execute(f"CREATE TABLE IF NOT EXISTS inventory ({INV})")
         self.Cursor.execute(f"CREATE TABLE IF NOT EXISTS sales ({SALE})")
-        self.Cursor.execute(f"CREATE TABLE IF NOT EXISTS employees (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)")
+        self.Cursor.execute(f"CREATE TABLE IF NOT EXISTS employees (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, Token VARCHAR(64) NOT NULL)")
     
     #DEBUG OP: PRUNE ALL DB
     def PRUNE(self):
@@ -43,12 +44,12 @@ class DBW:
     Headers={
         "inventory":["Name","Compound","Contents","Strength","Price","Available"],
         "sales":["Date","MedID","Amount","Cost","EmplID"],
-        "employees":[]
+        "employees":["Token"]
         }
     def table_insert(self,table,data):
-        if(table=="employees"):
-            self.Cursor.execute(f"INSERT INTO employees DEFAULT VALUES")
-            return
+        #if(table=="employees"):
+        #    self.Cursor.execute(f"INSERT INTO employees DEFAULT VALUES")
+        #    return
         TL=[]
         d__k=data.keys()
         Headers=DBW.Headers[table]
@@ -95,3 +96,8 @@ class DBW:
         return L
     def timestamp(self,k=0): #get time in unix seconds
         return str(datetime.datetime.now()-datetime.timedelta(seconds=k))
+    def salt(self,Username,Password):
+        c=hashlib.sha256(f"{Username}{Password}".encode()).hexdigest()
+        return c
+    def add_employee(self,Username,Password):
+        self.table_insert("employees",{"ID":Username,"Token":self.salt(Username,Password)})
