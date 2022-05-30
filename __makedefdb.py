@@ -32,3 +32,19 @@ def make(DBW):
             DBW.table_insert("inventory",D)
             Count+=1
     
+    for i in range(1,6):
+        DBW.add_employee(i,f"PASSWORD{i}")
+    for i in range(500):
+        MID=np.random.randint(1,Count-1)
+        Med=DBW.table_find_approx("inventory",{"ID":MID})[0]
+        Amt=np.random.randint(1,5)
+        D={
+        "Date":DBW.timestamp(int(np.random.uniform(0,60*60*24*365))),
+        "MedID":MID,
+        "Amount":Amt,
+        "Cost":float(Med["Price"])*Amt,
+        "EmplID":np.random.randint(0,4),
+        }
+        DBW.table_insert("sales",D)
+    DBW.DB.commit()
+    #DBW.DUMP()
