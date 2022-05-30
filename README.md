@@ -19,8 +19,7 @@ Demostración de técnicas de Ingeniería de Software utilizando las librerías 
 ### Sobre el uso de la documentación
 
 // Requerimientos de perfil, advertencias, precauciones, cambios desde la última versión, tabla de volúmenes.
-
-###  
+  
 
 ### Conceptos de las operaciones - Modo Instruccional
 //Uso, instalación, desinstalación, orientación de GUI, inicio de sesión, navigación, operaciones de datos, cancelar operaciones.
