@@ -10,3 +10,32 @@ Demostración de técnicas de Ingeniería de Software utilizando las librerías 
 > 
 > Sofía García De La Rosa [@SofiaDeLaRosa](https://github.com/SofiaDeLaRosa)
 
+### Tabla de Contenidos
+
+### Introducción
+// Dirigido a:, Alcance:, Propósito:, Resumen:
+
+
+### Sobre el uso de la documentación
+
+// Requerimientos de perfil, advertencias, precauciones, cambios desde la última versión, tabla de volúmenes.
+
+###  
+
+### Conceptos de las operaciones - Modo Instruccional
+//Uso, instalación, desinstalación, orientación de GUI, inicio de sesión, navigación, operaciones de datos, cancelar operaciones.
+
+### Procedimientos - Modo Referencial
+// Overview de conceptos y procesos, Identificar actividades de prerequisito para iniciar tareas, listado de materiales necesarios para concluir una tarea (docs, passwds, software, drivers, protocols...), advertencias particulares
+
+### Información sobre comandos de software - Atajos
+
+### Mensajes de Error y Troubleshooting
+
+### Glosario
+
+### Características de navegación
+
+### Índice
+
+### Herramientas de Búsqueda
