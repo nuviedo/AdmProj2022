@@ -70,31 +70,31 @@ En la ventana de inventario se puede visualizar los medicamentos en existencia s
 #### Ventas
 
 ![python_GTVv7m2qoz](https://user-images.githubusercontent.com/100146672/171527348-249bf50a-d6ce-49f1-981e-20c43cc348e4.png)
-En la ventana de inventario se puede visualizar los medicamentos en existencia según su nombre, compuesto activo, o identificador único. Al introducir valores válidos, la búsqueda tratará de reducirse a medida de lo posible, para dar una lista de medicamentos seleccionables que cumplen las características.
-
+En la ventana de ventas se permite al vendedor buscar ventas particulares que se realizaron en el pasado, sea por fecha, por el vendedor que las emitió, o por un identificador único de la medicina involucrada o de la venta en sí. De manera similar a la interfaz anterior, se muestran los datos relacionados a la venta, así como algunos atajos a datos sobre el fármaco vendido.
 
 #### Terminal
 
 ![python_XAvwq7g9Ob](https://user-images.githubusercontent.com/100146672/171527386-6cbb1075-50a6-4e5e-baab-7b0ce30252fc.png)
-En la ventana de inventario se puede visualizar los medicamentos en existencia según su nombre, compuesto activo, o identificador único. Al introducir valores válidos, la búsqueda tratará de reducirse a medida de lo posible, para dar una lista de medicamentos seleccionables que cumplen las características.
+Por último, la terminal permite realizar una venta, incluyendo múltiples medicamentos en diversas cantidades, asociadas al identificador del empleado cuya sesión esté activa. Esto realiza una operación de escritura sobre la base de datos, por lo que debe ser tratada con cautela: no se permite realizar modificaciones a los registros por motivos de auditoría, por lo que toda compra de fármacos es final.
 
 
+#### Cancelación de Operaciones
 
+Debido a la cantidad mínima de tiempo en la que se ejecutan las operaciones necesarias, generalmente no se tiene el tiempo suficiente para cancelar una operación de escritura, y en caso de que sí se demore la aplicación por alguna falla de conexión, la aplicación tendría que reiniciarse.
 
-
-//Uso, instalación, desinstalación, orientación de GUI, inicio de sesión, navigación, operaciones de datos, cancelar operaciones.
 
 ### Procedimientos - Modo Referencial
-// Overview de conceptos y procesos, Identificar actividades de prerequisito para iniciar tareas, listado de materiales necesarios para concluir una tarea (docs, passwds, software, drivers, protocols...), advertencias particulares
 
-### Información sobre comandos de software - Atajos
+En cuanto a procesos, los procesos de búsqueda se hacen utilizando la técnica de _fuzzy search_, donde se busca una cadena que se aproxime a un resultado dado para cada consulta, y se combinan de forma exclusiva. Para introducir valores, se especifican sin dejar ningún dato nulo, y haciendo ejecuciones secuenciales por cada compra para aprovechar la optimización de multiconsultas.
+
+Por defecto, las contraseñas generadas deben ser cambiadas, puesto a que se generan en función de el ID del empleado de forma muy poco segura.
+
+Para concluir una venta, es imperativo tener a la mano la información identificante del medicamento a vender.
 
 ### Mensajes de Error y Troubleshooting
 
+El único mensaje de error presente en la aplicación es al fallar un inicio de sesión: se le avisará al usuario que vuelva a introducir su contraseña, y se esperará 3 segundos por defecto antes de cerrar el mensaje de manera automática.
+
 ### Glosario
 
-### Características de navegación
-
 ### Índice
-
-### Herramientas de Búsqueda
