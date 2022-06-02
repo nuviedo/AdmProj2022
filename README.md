@@ -94,7 +94,3 @@ Para concluir una venta, es imperativo tener a la mano la información identific
 ### Mensajes de Error y Troubleshooting
 
 El único mensaje de error presente en la aplicación es al fallar un inicio de sesión: se le avisará al usuario que vuelva a introducir su contraseña, y se esperará 3 segundos por defecto antes de cerrar el mensaje de manera automática.
-
-### Glosario
-
-### Índice
