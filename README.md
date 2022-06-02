@@ -11,9 +11,25 @@ Demostración de técnicas de Ingeniería de Software utilizando las librerías 
 > Sofía García De La Rosa [@SofiaDeLaRosa](https://github.com/SofiaDeLaRosa)
 
 ### Tabla de Contenidos
+* Introducción
+* Sobre el uso de la documentación
+* Conceptos de las operaciones - Modo Instruccional
+* Procedimientos - Modo Referencial
+* Información sobre comandos de software - Atajos
+* Mensajes de Error y Troubleshooting
+* Glosario
+* Características de navegación
+* Índice
+* Herramientas de Búsqueda
+
 
 ### Introducción
-// Dirigido a:, Alcance:, Propósito:, Resumen:
+El propósito de este documento es el definir la funcionalidad del proyecto. El proyecto está planeado para poder simplificar el sistema de medicinas de diferentes tiendas de fármacos para poder hacer su búsqueda, sus ventas, y su control de inventario más simple, con una interfaz fácil de entender para el usuario.
+Esto se hace con una terminal dividida en tres secciones principales:
+* Inventario : Para revisar los ítems en stock
+* Ventas : Para ver el registro de ventas hechas con anterioridad
+* Terminal : Para realizar ventas
+
 
 
 ### Sobre el uso de la documentación
