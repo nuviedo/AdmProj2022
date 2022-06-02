@@ -34,8 +34,11 @@ Esto se hace con una terminal dividida en tres secciones principales:
 
 ### Sobre el uso de la documentación
 
-// Requerimientos de perfil, advertencias, precauciones, cambios desde la última versión, tabla de volúmenes.
-  
+Para el uso de la aplicación se asume que el usuario es relativamente familiar con el funcionamiento de una farmacia, el proceso de ventas convencional, y las características presentes en un medicamento en general, como lo son el nombre de marca, nombre genérico, compuesto activo, dosage, precio unitario, presentaciones, etc. 
+
+Una advertencia a hacerse es que el sistema no contempla correcciones o devoluciones a las ventas, por lo que cualquier venta realizada es final.
+El usuario debe tener en cuenta que su credencial de acceso es única y solo se dictamina por el administrador de red a petición de un empleado, y que cada venta realizada se asigna al empleado que la finalizó, por lo que es vital preservar las contraseñas como un secreto.
+
 
 ### Conceptos de las operaciones - Modo Instruccional
 //Uso, instalación, desinstalación, orientación de GUI, inicio de sesión, navigación, operaciones de datos, cancelar operaciones.
